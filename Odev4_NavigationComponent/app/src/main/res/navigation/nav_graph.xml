@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.samethabali.odev4.AnasayfaFragment"
+        android:label="Anasayfa"
+        tools:layout="@layout/fragment_anasayfa">
+        <action
+            android:id="@+id/action_anasayfaFragment_to_sayfaAFragment"
+            app:destination="@id/sayfaAFragment" />
+        <action
+            android:id="@+id/action_anasayfaFragment_to_sayfaXFragment"
+            app:destination="@id/sayfaXFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sayfaAFragment"
+        android:name="com.samethabali.odev4.SayfaAFragment"
+        android:label="Sayfa A"
+        tools:layout="@layout/fragment_sayfa_a">
+        <action
+            android:id="@+id/action_sayfaAFragment_to_sayfaBFragment"
+            app:destination="@id/sayfaBFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sayfaBFragment"
+        android:name="com.samethabali.odev4.SayfaBFragment"
+        android:label="Sayfa B"
+        tools:layout="@layout/fragment_sayfa_b">
+        <action
+            android:id="@+id/action_sayfaBFragment_to_sayfaYFragment"
+            app:destination="@id/sayfaYFragment"
+            app:popUpTo="@id/anasayfaFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sayfaXFragment"
+        android:name="com.samethabali.odev4.SayfaXFragment"
+        android:label="Sayfa X"
+        tools:layout="@layout/fragment_sayfa_x">
+        <action
+            android:id="@+id/action_sayfaXFragment_to_sayfaYFragment"
+            app:destination="@id/sayfaYFragment"
+            app:popUpTo="@id/anasayfaFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sayfaYFragment"
+        android:name="com.samethabali.odev4.SayfaYFragment"
+        android:label="Sayfa Y"
+        tools:layout="@layout/fragment_sayfa_y" />
+
+</navigation>
